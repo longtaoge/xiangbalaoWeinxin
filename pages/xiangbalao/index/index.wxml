@@ -1,0 +1,72 @@
+<!-- 首页 -->
+<scroll-view class="container" scroll-y="true" scroll-into-view="{{toView}}
+scroll-top="{{srollTop}}" bindscroll="scroll"
+ > 
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box" id="top" >
+  <block wx:for-items="{{banner_list.banner}}" wx:key="index" >
+    <swiper-item>
+      <image  class="slide-image" src="{{item.pic_url}} "/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 下部 -->
+<view>
+ <!-- 分隔条 -->
+    <view class="menueview">
+    </view>
+    
+    <!-- 新品推荐 -->
+    <view class='hg_container' id='new'>
+      <text class='hg_title' > 新品推荐</text>
+      <view class='gooditem'>
+      <view class='imgview' wx:key="index" 
+      wx:for="{{newgoods}}"
+      wx:for-index="idx"  wx:for-item="good">
+      <image class='producting' src='{{good.hg_pic}}'/>
+      </view>
+      </view>
+    </view>
+    <!-- 超值买 -->
+    <view class='hg_container'>
+      <text class='hg_title' >超值买</text>
+        <view class='gooditem'>
+          <view class='imgview' wx:key="index" 
+           wx:for="{{newgoods}}"
+           wx:for-index="idx"  wx:for-item="good">
+            <image class='producting' 
+            src='{{good.hg_pic}}'/>
+          </view>
+      </view>
+
+
+    </view>
+    <!-- 食惠购 -->
+    <view class='hot_container'>
+      <view class='hot_title'>食惠购</view>
+      <view class='hot_gooditem'>
+           <view class='hot_imgview' wx:key="index" 
+           wx:for="{{hotgoods}}"
+           wx:for-index="idx"  wx:for-item="good">
+            <image 
+            src='{{good.more_pic}}'/>
+          </view>
+      </view>
+
+
+    </view>
+    <!-- 底部 -->
+    <view class='footer' bindtap='tap'>
+      <view>
+        <text>冀ICP备88888888号</text>
+        <text>xiangbalao.org</text>
+        <text>乡吧佬食品批发</text>
+        <text>河北省石家庄华北食品城</text>
+      </view>
+    
+    </view>
+
+
+</view>
+</scroll-view>

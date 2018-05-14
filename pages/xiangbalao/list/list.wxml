@@ -1,0 +1,74 @@
+<!-- 分类列表页 pages/xiangbalao/list/list.wxml-->
+<!-- 顶部 tab  -->
+<view class='list_tab'>
+  <ul>
+      <li class="{{current == 0 ? 'active':''}}" catchtap="switchSlider" data-index="0">默认</li>
+      <li class="{{current == 1 ? 'active':''}}" catchtap="switchSlider" data-index="1">价格</li>
+      <li class="{{current == 2 ? 'active':''}}" catchtap="switchSlider" data-index="2">热销</li>
+  </ul>
+</view>
+
+ 
+
+<swiper class="swiper-box" current='{{current}}' indicator-dots="{{swiper.indicatorDots}}"
+  autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" bindchange='changeSlider'>
+  <block >
+    <!-- 页面 1 -->
+    <swiper-item>
+     <scroll-view scroll-y="true" class="scroll-box" > 
+        <view class="list_view">
+            <view class="list-box" wx:for="{{listgoods}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" bindtap="showdetail">
+              <view class='list_image'> 
+                <image src="{{list.pic_url}}"/>
+              </view>
+              <view class="list-text">
+                <text class='name'>{{list.name}}</text>
+                <view class="txt">
+                  <text class="price">{{list.price}}</text>
+                  <text class='type'>{{list.type}}</text>
+              </view>
+            </view>
+          </view> 
+        </view>
+     </scroll-view>
+    </swiper-item>
+    <!-- 页面 2 -->
+      <swiper-item>
+     <scroll-view scroll-y="true" class="scroll-box" > 
+        <view class="list_view">
+            <view class="list-box" wx:for="{{listgoods}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" bindtap="showdetail">
+              <view class='list_image'> 
+                <image src="{{list.pic_url}}"/>
+              </view>
+              <view class="list-text">
+                <text class='name'>{{list.name}}</text>
+                <view class="txt">
+                  <text class="price">{{list.price}}</text>
+                  <text class='type'>{{list.type}}</text>
+              </view>
+            </view>
+          </view> 
+        </view>
+     </scroll-view>
+    </swiper-item>
+     <!-- 页面 3 -->
+      <swiper-item>
+     <scroll-view scroll-y="true" class="scroll-box" > 
+        <view class="list_view">
+            <view class="list-box" wx:for="{{listgoods}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" bindtap="showdetail">
+              <view class='list_image'> 
+                <image src="{{list.pic_url}}"/>
+              </view>
+              <view class="list-text">
+                <text class='name'>{{list.name}}</text>
+                <view class="txt">
+                  <text class="price">{{list.price}}</text>
+                  <text class='type'>{{list.type}}</text>
+              </view>
+            </view>
+          </view> 
+        </view>
+     </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>

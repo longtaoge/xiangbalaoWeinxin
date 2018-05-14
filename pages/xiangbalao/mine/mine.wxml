@@ -1,0 +1,33 @@
+<!-- 个人中心 pages/xiangbalao/mine/mine.wxml-->
+<view class='mine-box'>
+      <!-- 登录对话框 -->
+      <import src="/template/signin.wxml"/>
+      <template is="signin" data="{{...item}}"/>
+      <view class='user'>
+          <view class='user-prc'><image src='{{userInfo.avatarUrl}}'></image></view>
+          <view class='user-name'>{{userInfo.nickName}}</view>
+          <view class='user-text'>
+            <text>悠币：0</text>
+            <text>余额：￥0.00</text>
+          </view>
+      
+      </view>
+      
+      <!-- 图标 -->
+      <view class='btn'>
+       <ul>
+          <block wx:for="{{mine_list}}" wx:for-item="mine" wx:kdy="index">
+            <li>
+            <image src="{{mine.pic_url}}"></image> <span> {{mine.title}}</span>
+            </li>
+          </block>
+       </ul>
+      </view>
+
+      <!-- 退出 -->
+      <view class='footer'>
+        <button  type='warn' bindtap='quit'> 退出登录</button>
+      </view>
+
+
+</view> 

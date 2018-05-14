@@ -1,0 +1,15 @@
+<!--pages/xiangbalao/cart/cart.wxml-->
+<view class='cart-box'>
+  <view>
+    <image src='http://img02.yiguo.com/e/web/150930/00981/161016/cart-none.png'></image>
+  </view>
+  <view class='cart-emt'> 购物车还是空的...</view>
+  <view>
+    <button type='primary' bindtap='gobuy' >去购物</button>
+  </view>
+
+
+</view>
+
+
+y

@@ -1,0 +1,98 @@
+/* pages/xiangbalao/detail/detail.wxss */
+page{
+  height: 100%;
+}
+.detail-box{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.detail-list{
+  flex: 1;
+  overflow: hidden;
+}
+.topimage{
+  border-bottom: 16rpx solid #eee;
+}
+.detail-list scroll-view{
+ height: 100%;
+}
+.detail-name{
+    font-size: 14px;
+    color: #aaa;
+}
+.detail-name ul{
+  display: flex;
+  flex-direction: column;
+}
+.detail-name li{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20px;
+  align-content: center;
+  border-bottom: 1px solid #eee;
+}
+
+.hot-container{
+  background-color: #eee;
+
+}
+
+.hot-title{
+  padding: 16px;
+  color: red;
+  font-size: 14px;
+  background-color: #fff;
+  width: 100%;
+  border-bottom: 6px solid #eee;
+}
+
+.hot-gooditem{
+  padding: 0px;
+
+}
+
+.hot-gooditem view{
+  padding: 0px;
+}
+.hot-product{
+  width: 100%;
+  height: 280rpx;
+}
+
+.detail-footer{
+height: 88rpx;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-size: 14px;
+
+}
+
+.detail-1{
+  flex: 1;
+}
+.detail-2{
+  flex: 1;
+}
+.detail-3{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f47920;
+}
+.detail-4{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:red;
+
+
+}
